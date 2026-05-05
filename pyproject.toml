@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "redaction-research"
+version = "0.1.0"
+description = "Local PII redaction benchmark utilities."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+gguf = [
+  "huggingface-hub>=0.23",
+  "llama-cpp-python>=0.2.90",
+]
+presidio = [
+  "presidio-analyzer",
+  "presidio-anonymizer",
+  "spacy",
+]
+
+[project.scripts]
+redaction-benchmark = "redaction_research.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

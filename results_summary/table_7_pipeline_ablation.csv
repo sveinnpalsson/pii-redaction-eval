@@ -1,0 +1,6 @@
+Pipeline,Detector/model,Hide rate,Visible,F1,F2,Over,Mean ms
+OPF-D,OPF default,__RAW__89.4\%,444,0.733,0.727,329,20.5
+OPF-A,OPF argmax,__RAW__90.0\%,422,0.732,0.730,384,17.8
+OPF-NO,OPF no-overlap,__RAW__89.4\%,444,0.733,0.727,329,20.4
+OPF+R,OPF + rules,__RAW__90.6\%,395,0.720,0.727,534,20.2
+OPF-A+R,OPF argmax + rules,__RAW__91.0\%,377,0.719,0.729,586,17.5

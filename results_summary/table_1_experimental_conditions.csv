@@ -1,0 +1,7 @@
+Condition,Family,Detector/model,Label policy,Quant,Backend,Notes
+R1,Rule,Regex,benchmark,N/A,Python re,deterministic
+P1,Rule/NER,Presidio default,Presidio,N/A,Presidio local CPU,default registry
+P2,Rule/NER,Presidio custom,P+custom,N/A,Presidio local CPU,added recognizers
+OPF-D,Specialized PII model,OPF default,OPF-8,PT,OPF local CUDA,Viterbi
+OPF+R,Specialized PII model + rules,OPF + rules,OPF-8 + rules,PT,OPF local CUDA,deterministic safety pass
+Q27-D,Generative LLM,Qwen3.5-27B direct,prompted,Q4KM,local GGUF runtime,direct redaction comparator

@@ -1,0 +1,23 @@
+{
+  "schema_version": "2026-05-arxiv-v1",
+  "condition_id": "Q27-D",
+  "base_model_id": "Qwen/Qwen3.5-27B",
+  "gguf_repo_id": "lmstudio-community/Qwen3.5-27B-GGUF",
+  "gguf_filename": "Qwen3.5-27B-Q4_K_M.gguf",
+  "gguf_sha256": "730aa508f1e48bb680917c16069176e07df86a29dc0c6602fc252c8f93062da9",
+  "gguf_source_url": "https://huggingface.co/lmstudio-community/Qwen3.5-27B-GGUF",
+  "gguf_file_url": "https://huggingface.co/lmstudio-community/Qwen3.5-27B-GGUF/blob/main/Qwen3.5-27B-Q4_K_M.gguf",
+  "quantization": "Q4_K_M GGUF",
+  "quantization_provider": "LM Studio team",
+  "quantization_llama_cpp_release": "b8145",
+  "runtime": "llama.cpp through llama-cpp-python",
+  "runtime_commit_or_release": "recorded by the runner from the installed llama-cpp-python package",
+  "prompt_version": "qwen_direct_redaction_v1",
+  "prompt_path": "configs/prompts/qwen_direct_redaction_v1.txt",
+  "context_length": 8192,
+  "temperature": 0,
+  "top_p": 1,
+  "max_tokens": 512,
+  "chat_format": "qwen",
+  "n_gpu_layers": -1
+}

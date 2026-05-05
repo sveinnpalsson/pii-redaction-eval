@@ -1,0 +1,152 @@
+{
+  "schema_version": "2026-05-arxiv-v1-public",
+  "purpose": "Public provenance summary for aggregate result CSVs. Raw AI4Privacy-derived fixture rows and raw model outputs are intentionally not redistributed.",
+  "dataset_sources": {
+    "ai4privacy": {
+      "dataset_id": "ai4privacy/pii-masking-300k",
+      "source_files": {
+        "validation": "data/validation/1english_openpii_8k.jsonl",
+        "train": "data/train/1english_openpii_30k.jsonl"
+      },
+      "redistribution": "not included; rebuild locally after obtaining the upstream dataset under its license"
+    },
+    "local_vault_stress": {
+      "path": "data/fixtures/local-vault-stress-set-v1.jsonl",
+      "redistribution": "included; synthetic fixture authored for this benchmark"
+    }
+  },
+  "fixtures": {
+    "ai4privacy_validation": {
+      "cases": 1065,
+      "expected_spans": 4201,
+      "sha256": "84caebf49f0ea8e74357da3368abfa19da5bf950b6ac17195c00379db6f011a0",
+      "split": "validation",
+      "redistributed": false
+    },
+    "ai4privacy_train": {
+      "cases": 3817,
+      "expected_spans": 16148,
+      "sha256": "f3d85fa52d00247dc2223d010abc59ae5dfb1e9231916459a5930b8c7aaaccfa",
+      "split": "train",
+      "redistributed": false
+    },
+    "local_vault_stress": {
+      "cases": 200,
+      "expected_spans": 656,
+      "path": "data/fixtures/local-vault-stress-set-v1.jsonl",
+      "sha256": "5e689c214d4e2d163953a4e907fef89f3f2989914baa0831a77a76ca4d7ebf06",
+      "split": "stress",
+      "redistributed": true
+    }
+  },
+  "conditions": [
+    {
+      "condition_id": "R1",
+      "name": "regex",
+      "runtime_class": "Python re",
+      "quantization": "not applicable"
+    },
+    {
+      "condition_id": "P1",
+      "name": "Presidio default",
+      "runtime_class": "Presidio local CPU",
+      "quantization": "not applicable"
+    },
+    {
+      "condition_id": "P2",
+      "name": "Presidio custom",
+      "runtime_class": "Presidio local CPU with local recognizers",
+      "quantization": "not applicable"
+    },
+    {
+      "condition_id": "OPF-D",
+      "name": "openai/privacy-filter",
+      "runtime_class": "OPF local CUDA",
+      "quantization": "PyTorch safetensors"
+    },
+    {
+      "condition_id": "OPF-A",
+      "name": "openai/privacy-filter argmax decode",
+      "runtime_class": "OPF local CUDA",
+      "quantization": "PyTorch safetensors"
+    },
+    {
+      "condition_id": "OPF-NO",
+      "name": "openai/privacy-filter no-overlap decode",
+      "runtime_class": "OPF local CUDA",
+      "quantization": "PyTorch safetensors"
+    },
+    {
+      "condition_id": "OPF+R",
+      "name": "openai/privacy-filter plus deterministic safety rules",
+      "runtime_class": "OPF local CUDA plus Python re",
+      "quantization": "PyTorch safetensors"
+    },
+    {
+      "condition_id": "OPF-A+R",
+      "name": "openai/privacy-filter argmax plus deterministic safety rules",
+      "runtime_class": "OPF local CUDA plus Python re",
+      "quantization": "PyTorch safetensors"
+    },
+    {
+      "condition_id": "Q27-D",
+      "name": "Qwen/Qwen3.5-27B",
+      "runtime_class": "local GGUF runtime",
+      "base_model_id": "Qwen/Qwen3.5-27B",
+      "gguf_repo_id": "lmstudio-community/Qwen3.5-27B-GGUF",
+      "gguf_filename": "Qwen3.5-27B-Q4_K_M.gguf",
+      "gguf_sha256": "730aa508f1e48bb680917c16069176e07df86a29dc0c6602fc252c8f93062da9",
+      "gguf_source_url": "https://huggingface.co/lmstudio-community/Qwen3.5-27B-GGUF",
+      "quantization": "Q4_K_M GGUF",
+      "quantization_provider": "LM Studio team",
+      "quantization_llama_cpp_release": "b8145",
+      "runtime": "llama.cpp through llama-cpp-python",
+      "runtime_commit_or_release": "recorded by the runner from the installed llama-cpp-python package",
+      "prompt_version": "qwen_direct_redaction_v1",
+      "prompt_path": "configs/prompts/qwen_direct_redaction_v1.txt",
+      "context_length": 8192,
+      "temperature": 0,
+      "top_p": 1,
+      "max_tokens": 512
+    }
+  ],
+  "table_inputs": [
+    {
+      "path": "results_summary/table_1_experimental_conditions.csv",
+      "sha256": "1e7eda4f07ba7d0cdcee16ad703ca5842d951a466c8f40604b6d205693264b4e"
+    },
+    {
+      "path": "results_summary/table_2_main_validation_results.csv",
+      "sha256": "5c7d8895828ca34fc4c03bad6eb44cee2df25e0ca8bf537e6020bff73d471a08"
+    },
+    {
+      "path": "results_summary/table_3_runtime_reliability.csv",
+      "sha256": "00e596b28e72776db1460295719bfc7e475ec9038a85fb9b79d5031e4b2704af"
+    },
+    {
+      "path": "results_summary/table_4_category_leakage_summary.csv",
+      "sha256": "5b2a8565d194478b95bd03496e900a386d6f12ac1e444418ec485f3990cda5ef"
+    },
+    {
+      "path": "results_summary/table_5_stress_set_results.csv",
+      "sha256": "96d4d9da21e786b3cc843c35955827900e3f509f91569634833aa8327e7f83a0"
+    },
+    {
+      "path": "results_summary/table_6_opf_rules_delta.csv",
+      "sha256": "7534d2b89bec969c1f9af005787d8bb863464f77430dfc112e4daa3a32e5c334"
+    },
+    {
+      "path": "results_summary/table_7_pipeline_ablation.csv",
+      "sha256": "d3515017d24baf8ed151338534a24107a22f59938c3dd9144f9997a034382a53"
+    },
+    {
+      "path": "results_summary/table_8_failure_examples.csv",
+      "sha256": "b6b3691ff5bfe0b94edc273ce2c1a57878984e43957cb67953e0705fbe719166"
+    },
+    {
+      "path": "results_summary/table_9_supporting_split_consistency.csv",
+      "sha256": "1eaca44b2f000cd47ae950b36c1581b15bfa519af5a8eecce21cbd0159c6e46a"
+    }
+  ],
+  "results": []
+}

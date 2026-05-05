@@ -1,0 +1,8 @@
+Split,Rule family,Visible fixed,Over delta,Interpretation
+validation,account-like IDs,14,184,Broad account-like-ID patterns are costly on validation; scope with context or allowlists.
+validation,contact strings,35,19,High-confidence contact cleanup fixes standard contact leaks.
+stress,account-like IDs,25,6,Account-like-ID rules are useful for vault-style identifiers.
+stress,contact strings,2,0,Contact cleanup transfers cleanly to vault-style text.
+stress,handles,3,0,"Handles are deployment-specific identifiers, not general PII upgrades."
+stress,secrets/tokens,3,0,Secret-like strings require explicit local policy coverage.
+stress,URLs,9,1,URLs and network identifiers benefit from local safety coverage.

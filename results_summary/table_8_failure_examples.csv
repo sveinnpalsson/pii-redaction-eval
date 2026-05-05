@@ -1,0 +1,8 @@
+Pattern,Condition,Split,Observed behavior,Deployment implication
+residual address/path fragment,OPF+R,validation,Address-like fragments and local path fragments remain visible in a small number of cases after the safety pass.,Location-like and path-like spans need deployment-specific review beyond ordinary contact strings.
+account-like-ID over-redaction,OPF+R,validation,Account-like-ID rules fix 14 visible leaks while adding 184 over-redactions.,Broad identifier rules need local allowlists or tighter context gates.
+local-vault domain mismatch,P2,stress,"Custom Presidio recognizers improve path, handle, and ticket coverage but still miss contextual local identifiers.",Pattern recognizers are domain tools that require local iteration and utility review.
+taxonomy mismatch,OPF-D,stress,OPF-D hides most stress spans but records many wrong-label hides under the benchmark taxonomy.,Binary privacy improvement can still break placeholder semantics.
+unsupported local identifier,OPF-D,stress,"Local path, handle, and account-like formats can fall outside standard PII-category expectations.",Specialized PII models still need local policy coverage for vault-adjacent identifiers.
+wrong-label hide,Q27-D,validation,Direct Qwen hides strongly but produces 634 wrong-label hides.,Workflows that depend on placeholder categories need label-aware validation.
+utility tradeoff/rewrite,Q27-D,stress,The decoder hides more residual values but can rewrite or mask more broadly than requested.,"Direct decoding is a high-capacity comparator, not the default policy."

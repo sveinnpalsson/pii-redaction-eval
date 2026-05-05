@@ -1,0 +1,7 @@
+Condition,Backend,Mean ms,P50 ms,P95 ms,P99 ms,Peak VRAM
+R1,CPU regex,0.0,0.0,0.1,--,--
+P1,Presidio CPU,9.7,9.3,13.2,16.1,--
+P2,Presidio CPU,9.7,9.3,13.1,15.6,--
+OPF-D,OPF CUDA,20.5,18.8,22.5,25.6,3.4 GiB
+OPF+R,OPF CUDA,20.2,18.5,22.1,24.4,3.4 GiB
+Q27-D,GGUF CUDA,3685.3,3459.0,5429.4,6674.4,17.7 GiB

@@ -1,0 +1,24 @@
+.venv/
+.venv-*/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+
+# Local or restricted data artifacts.
+data/fixtures/ai4privacy-*.jsonl
+data/fixtures/mini/ai4privacy-*.jsonl
+local_data/
+results/
+runs/
+
+# Build products.
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.pdf

@@ -1,0 +1,7 @@
+Condition,F1,F2,Hide rate,Visible,Leaks/1k,Wrong,Over
+R1,0.252,0.185,"__RAW__23.6\% {\scriptsize [21.6, 25.7]}","__RAW__3208 {\scriptsize [3017, 3399]}","__RAW__763.6 {\scriptsize [742.6, 784.2]}",335,26
+P1,0.498,0.449,"__RAW__59.6\% {\scriptsize [57.3, 61.9]}","__RAW__1696 {\scriptsize [1563, 1836]}","__RAW__403.7 {\scriptsize [380.7, 426.7]}",736,393
+P2,0.498,0.457,"__RAW__60.0\% {\scriptsize [57.7, 62.3]}","__RAW__1680 {\scriptsize [1548, 1822]}","__RAW__399.9 {\scriptsize [377.1, 422.7]}",702,580
+OPF-D,0.733,0.727,"__RAW__89.4\% {\scriptsize [88.1, 90.7]}","__RAW__444 {\scriptsize [388, 503]}","__RAW__105.7 {\scriptsize [93.2, 118.7]}",721,329
+OPF+R,0.720,0.727,"__RAW__90.6\% {\scriptsize [89.4, 91.8]}","__RAW__395 {\scriptsize [342, 449]}","__RAW__94.0 {\scriptsize [82.4, 105.8]}",733,534
+Q27-D,__RAW__\textbf{0.762},__RAW__\textbf{0.773},"__RAW__\textbf{93.2\%} {\scriptsize [91.6, 94.8]}","__RAW__\textbf{284} {\scriptsize [217, 359]}","__RAW__\textbf{67.6} {\scriptsize [52.2, 84.3]}",634,502

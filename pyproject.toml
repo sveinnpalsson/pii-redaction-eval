@@ -7,6 +7,7 @@ name = "redaction-research"
 version = "0.1.0"
 description = "Local PII redaction benchmark utilities."
 readme = "README.md"
+license = { file = "LICENSE" }
 requires-python = ">=3.11"
 dependencies = []
 

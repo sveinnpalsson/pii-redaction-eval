@@ -2,7 +2,7 @@
 
 This repository contains the experiment-reproduction code and instructions for
 the paper: **Redaction Before Delegation: Benchmarking Local PII Filters on
-Consumer Hardware**.
+Consumer-GPU-Class Hardware**.
 
 It contains:
 
@@ -36,6 +36,9 @@ The paper uses:
 - synthetic stress: 200 cases, 656 expected spans
 
 The expected fixture hashes are recorded in `results_summary/registry.json`.
+The AI4Privacy source revision pinned for this release is
+`259743348cf6cba118f3149a3cffe1824390946c`, accessed from Hugging Face on
+2026-05-07 UTC.
 
 ## Install
 
@@ -79,7 +82,7 @@ python scripts/build_ai4privacy_fixtures.py \
   --output-dir local_data/fixtures \
   --validation-cases 1065 \
   --train-cases 3817 \
-  --source-revision <UPSTREAM_REVISION>
+  --source-revision 259743348cf6cba118f3149a3cffe1824390946c
 ```
 
 The script writes:

@@ -4,6 +4,10 @@
   "dataset_sources": {
     "ai4privacy": {
       "dataset_id": "ai4privacy/pii-masking-300k",
+      "revision": "259743348cf6cba118f3149a3cffe1824390946c",
+      "revision_url": "https://huggingface.co/datasets/ai4privacy/pii-masking-300k/tree/259743348cf6cba118f3149a3cffe1824390946c",
+      "accessed_utc": "2026-05-07",
+      "license_name": "license.md",
       "source_files": {
         "validation": "data/validation/1english_openpii_8k.jsonl",
         "train": "data/train/1english_openpii_30k.jsonl"

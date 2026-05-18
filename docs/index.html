@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Redaction Before Delegation: Benchmarking Local PII Filters on Consumer-GPU-Class Hardware</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Google Scholar / Highwire metadata -->
+  <meta name="citation_title" content="Redaction Before Delegation: Benchmarking Local PII Filters on Consumer-GPU-Class Hardware">
+  <meta name="citation_author" content="Pálsson, Sveinn">
+  <meta name="citation_publication_date" content="2026/05/18">
+  <meta name="citation_pdf_url" content="https://sveinnpalsson.github.io/pii-redaction-eval/redaction-before-delegation.pdf">
+
+  <style>
+    body {
+      max-width: 820px;
+      margin: 48px auto;
+      padding: 0 24px;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+      color: #111;
+    }
+    h1 {
+      font-size: 2rem;
+      line-height: 1.2;
+      margin-bottom: 0.5rem;
+    }
+    .author {
+      font-size: 1.25rem;
+      margin-bottom: 0.25rem;
+    }
+    .meta {
+      color: #555;
+      margin-bottom: 2rem;
+    }
+    a {
+      color: #0645ad;
+    }
+    .links {
+      margin: 1.5rem 0;
+      padding: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      background: #fafafa;
+    }
+    code {
+      background: #f2f2f2;
+      padding: 0.1rem 0.25rem;
+      border-radius: 3px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Redaction Before Delegation: Benchmarking Local PII Filters on Consumer-GPU-Class Hardware</h1>
+
+  <div class="author">Sveinn Pálsson</div>
+  <div class="meta">Technical report / preprint · May 17, 2026</div>
+
+  <div class="links">
+    <p><strong>PDF:</strong> <a href="redaction-before-delegation.pdf">redaction-before-delegation.pdf</a></p>
+    <p><strong>Code and data:</strong> <a href="https://github.com/sveinnpalsson/pii-redaction-eval">github.com/sveinnpalsson/pii-redaction-eval</a></p>
+  </div>
+
+  <h2>Abstract</h2>
+
+  <p>
+    Cloud-hosted language models and retrieval systems are increasingly used with private text
+from documents, notes, logs, issue trackers, and local knowledge stores. A practical mitigation is
+to redact personally identifiable information (PII) locally before text crosses an application or
+model-provider trust boundary. We benchmark local PII and sensitive-span filtering architectures
+on consumer-GPU-class hardware, comparing deterministic rules, Presidio, OpenAI Privacy
+Filter (OPF), OPF plus deterministic safety rules, and local decoder LLM redaction. On an
+AI4Privacy-derived validation subset with 1,065 cases and 4,201 expected sensitive spans, OpenAI
+Privacy Filter leaves 444 visible spans at roughly 20 ms per case; adding deterministic safety rules
+reduces visible leakage to 395 spans with additional over-redaction; Qwen3.5-27B direct local
+redaction leaves 284 visible spans but requires roughly 3.7 s per case. On a synthetic 200-case
+local-workspace stress set, OPF plus deterministic safety rules substantially improves coverage of
+file paths, handles, account-like identifiers, URLs, and secret-like strings, while the local decoder
+remains the highest-capacity but slowest comparator. The results suggest that specialized local
+token-classification redactors are the strongest low-latency baseline for standard PII redaction.
+Local decoder LLMs reduce residual leakage in some settings and offer prompt-level policy
+flexibility, but at substantially higher latency and memory cost. The benchmark therefore
+reports visible leakage, wrong-label hides, over-redaction, latency, peak GPU memory, taxonomy
+mismatch, uncertainty, and reproducibility metadata alongside aggregate F1.
+  </p>
+
+  <h2>Citation</h2>
+
+  <p>
+    Sveinn Pálsson. <em>Redaction Before Delegation: Benchmarking Local PII Filters on Consumer-GPU-Class Hardware</em>. Technical report / preprint, May 17, 2026.
+  </p>
+
+  <h2>Notes</h2>
+
+</body>
+</html>
